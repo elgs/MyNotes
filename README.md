@@ -73,7 +73,7 @@ Generate RSA key pair
 ---
 `ssh-keygen -t rsa`
 
-Login ssh withou password
+Login ssh without password
 ---
 ```
 ssh user@server mkdir -p .ssh
