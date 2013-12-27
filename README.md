@@ -69,3 +69,15 @@ ifrm = (ifrm.contentWindow) ? ifrm.contentWindow : (ifrm.contentDocument.documen
 var my_dom = ifrm.document.getDocumentById('dom_id');  
 ```
 
+Generate RSA key pair
+---
+`ssh-keygen -t rsa`
+
+Login ssh withou password
+---
+```
+ssh user@server mkdir -p .ssh
+cat ~/.ssh/id_rsa.pub | ssh user@server "cat >> .ssh/authorized_keys"
+ssh user@server chmod 700 .ssh
+ssh user@server chmod 640 .ssh/authorized_key
+```
