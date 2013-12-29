@@ -11,6 +11,7 @@ Remove dependencies for homebrew formula
 brew rm FORMULA
 brew rm $(join <(brew leaves) <(brew deps FORMULA))
 ```
+Run `brew rm $(join <(brew leaves) <(brew deps FORMULA))` multiple times until it says `This command requires a keg argument`. Then run `brew doctor` to check dependencies missing. Finally run `brew cleanup`.
 
 Install go from homebrew
 ---
