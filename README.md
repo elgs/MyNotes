@@ -89,6 +89,6 @@ Sync Postfix user mapping table (Ubuntu)
 
 Enable Roundcube password plugin to use chpasswd driver
 ---
-Edit the file `/etc/sudoer`, then add this line:
+Edit the file `/etc/sudoers`, then add this line:
 `www-data ALL=NOPASSWD: /usr/sbin/chpasswd` under:
 `root    ALL=(ALL:ALL) ALL`
