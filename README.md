@@ -86,3 +86,9 @@ ssh user@server chmod 640 .ssh/authorized_key
 Sync Postfix user mapping table (Ubuntu)
 ---
 `cp -p /etc/passwd /var/spool/postfix/etc/passwd`
+
+Enable Roundcube password plugin to use chpasswd driver
+---
+Edit the file `/etc/sudoer`, then add this line:
+`www-data ALL=NOPASSWD: /usr/sbin/chpasswd` under:
+`root    ALL=(ALL:ALL) ALL`
