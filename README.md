@@ -92,3 +92,7 @@ Enable Roundcube password plugin to use chpasswd driver
 Edit the file `/etc/sudoers`, then add this line:
 `www-data ALL=NOPASSWD: /usr/sbin/chpasswd` under:
 `root    ALL=(ALL:ALL) ALL`
+
+Persist iptable configurations on Ubuntu
+---
+`apt-get install iptables-persistent`
