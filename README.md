@@ -96,3 +96,10 @@ Edit the file `/etc/sudoers`, then add this line:
 Persist iptable configurations on Ubuntu
 ---
 `apt-get install iptables-persistent`
+
+Adding and deleting zone using rndc
+---
+```
+rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
+rndc delzone mydomain.com.org
+```
