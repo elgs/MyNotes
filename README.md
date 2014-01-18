@@ -99,7 +99,18 @@ Persist iptable configurations on Ubuntu
 
 Adding and deleting zone using rndc
 ---
+to add a new zone
 ```
 rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
+rndc reconfig
+```
+
+to reload modified zone
+```
+rndc reload <zone>
+```
+
+to remove a zone
+```
 rndc delzone mydomain.com.org
 ```
