@@ -112,7 +112,7 @@ rndc reload <zone>
 
 to remove a zone
 ```
-rndc delzone mydomain.com.org
+rndc delzone mydomain.com
 ```
 
 Ultimate way to install node/npm with homebrew
