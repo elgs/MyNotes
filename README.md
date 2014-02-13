@@ -129,3 +129,20 @@ Extend logic volume
 # lvextend -l +100%FREE /dev/ubuntu0-vg/root
 # resize2fs /dev/ubuntu0-vg/root 
 ```
+
+Detect java executable
+---
+```bash
+#!/bin/bash
+
+if [[ $(which ${JAVA_HOME}/bin/java) ]]; then
+	exe="${JAVA_HOME}/bin/java"
+elif [[ $(which java) ]]; then
+	exe="java"
+else 
+	echo "Java environment is not detected."
+	exit 1
+fi
+
+${exe} -version
+```
