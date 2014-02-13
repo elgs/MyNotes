@@ -146,3 +146,13 @@ fi
 
 ${exe} -version
 ```
+
+$ in shell
+---
+```bash
+#$(xxx) execute the output of xxx
+$(which "$JAVA_HOME/bin/java") -version
+
+#${xxx} execute xxx
+${JAVA_HOME}/bin/java -version
+```
