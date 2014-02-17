@@ -100,6 +100,10 @@ Persist iptable configurations on Ubuntu
 
 Adding and deleting zone using rndc
 ---
+to enable rndc to add new zones, add the following code to /etc/bind/named.conf.option:
+```
+allow-new-zones yes;
+```
 to add a new zone
 ```
 rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
