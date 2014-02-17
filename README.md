@@ -112,7 +112,9 @@ rndc reconfig
 
 to reload modified zone
 ```
-rndc reload <zone>
+rndc freeze <zone>
+# do the change
+rndc thaw <zone>
 ```
 
 to remove a zone
