@@ -15,7 +15,7 @@ Run `brew rm $(join <(brew leaves) <(brew deps FORMULA))` multiple times until i
 
 Install go from homebrew
 ---
-`brew install go --cross-compile-all --cc=gcc-4.9`
+`brew install go --cross-compile-all`
 
 Build go project for many platforms
 ---
