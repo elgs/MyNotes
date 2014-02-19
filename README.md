@@ -128,7 +128,7 @@ Ultimate way to install node/npm with homebrew
 $ brew install node --without-npm
 $ curl https://npmjs.org/install.sh | sh
 ```
-Please note `sudo` is NOT used anywhere in the above commands. The reason why I want to install `node` and `npm` separately is that `homebrew` does not like `npm` to update `npm` iteslf. `homebrew` has a philosophy that everything is inside it's `Cellar`. I personally appreeciate `homebrew`'s clean way of doing things. However `npm` is just yet another package manager, which is not aware of `homebrew`'s cellars philosophy. Therefore, I prefer to get `homebrew` to manager `node`, and let `npm` to manage itself. 
+Please note `sudo` is NOT used anywhere in the above commands. The reason why I want to install `node` and `npm` separately is that `homebrew` does not like `npm` to update `npm` iteslf. `homebrew` has a philosophy that everything is inside it's `Cellar`. I personally appreeciate `homebrew`'s clean way of doing things. However `npm` is just yet another package manager, which is not aware of `homebrew`'s cellars philosophy. Therefore, I prefer to get `homebrew` to manager `node`, and let `npm` manage itself. 
 
 Extend logic volume
 ---
