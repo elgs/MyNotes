@@ -107,14 +107,12 @@ allow-new-zones yes;
 to add a new zone
 ```
 rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
-rndc reconfig
+rndc addzone mydomain.com ‘{ type slave; masters { master_ip; }; };’
 ```
 
 to reload modified zone
 ```
-rndc freeze <zone>
-# do the change
-rndc thaw <zone>
+rndc reload mydomain.com
 ```
 
 to remove a zone
