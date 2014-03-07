@@ -109,6 +109,11 @@ to add a new zone
 rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
 rndc addzone mydomain.com ‘{ type slave; masters { master_ip; }; };’
 ```
+to add the reserve zone
+```
+rndc addzone 0.168.192.in-addr.arpa  '{type master; file "/etc/bind/db/db.192.168.0";};'
+rndc addzone 0.168.192.in-addr.arpa '{ type slave; masters { master_ip; }; };'
+```
 
 to reload modified zone
 ```
