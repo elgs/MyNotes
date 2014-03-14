@@ -118,6 +118,7 @@ rndc addzone 0.168.192.in-addr.arpa '{ type slave; masters { master_ip; }; };'
 to reload modified zone
 ```
 rndc reload mydomain.com
+rndc reload 0.168.192.in-addr.arpa
 ```
 
 to remove a zone
