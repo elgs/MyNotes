@@ -106,7 +106,7 @@ allow-new-zones yes;
 ```
 to add a new zone
 ```
-rndc addzone mydomain.com  '{type master; file "/etc/bind/rndc_zones/mydomain.com";};'
+rndc addzone mydomain.com  '{type master; file "/etc/bind/db/mydomain.com";};'
 rndc addzone mydomain.com ‘{ type slave; masters { master_ip; }; };’
 ```
 to add the reserve zone
