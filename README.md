@@ -167,3 +167,19 @@ $(which "$JAVA_HOME/bin/java") -version
 #${xxx} execute xxx
 ${JAVA_HOME}/bin/java -version
 ```
+
+iptables for port forwarding
+---
+Edit this file `/etc/sysctl.conf`，and change the value from `0` to `1`:
+```
+net.ipv4.ip_forward = 1
+```
+Run `sysctl -p` to make the change effective 
+
+```
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport <localPort> -j DNAT --to <remoteIp>:<remotePort>
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport <localPort> -j DNAT --to <remoteIp>:<remotePort>
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport <localPort> -j DNAT --to <remoteIp>:<remotePort>
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport <localPort> -j DNAT --to <remoteIp>:<remotePort>
+iptables -t nat -A POSTROUTING -j MASQUERADE
+```
