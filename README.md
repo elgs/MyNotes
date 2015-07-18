@@ -1,6 +1,28 @@
 MyNotes
 =======
 
+Change vm root password
+---
+First mount the disk somewhere on the host. I created a directory called a, and mounted it there.
+```bash
+qemu-nbd -c /dev/nbd0 *.qcow2 
+mount /dev/nbd0p1 a
+```
+
+Change directory to a, and change the root password by modifying /etc/shadow:
+
+```bash
+perl -pe 's|(?<=root:)[^:]*|crypt("my_new_password","\$6\$some_salt\$")|e' etc/shadow > root/shadow
+cp root/shadow etc/
+rm root/shadow
+```
+
+Then unmount it:
+```bash
+umount /dev/nbd0p1
+qemu-nbd -d /dev/nbd0
+```
+
 Start subl from terminal
 ---
 `ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
