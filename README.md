@@ -1,6 +1,12 @@
 MyNotes
 =======
 
+Find string from files
+---
+```bash
+grep -nwr /path/to/search -e "word"
+```
+
 Change vm root password
 ---
 First mount the disk somewhere on the host. I created a directory called a, and mounted it there.
