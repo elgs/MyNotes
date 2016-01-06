@@ -1,5 +1,13 @@
 MyNotes
 =======
+Remove comments from Bash file
+---
+```bash
+grep -o '^[^#]*' file
+```
+* `-o`: prints only matched part of the line
+* `first ^`: beginning of the line
+* `[^#]*`: any character except # repeated zero or more times
 
 Find string from files
 ---
